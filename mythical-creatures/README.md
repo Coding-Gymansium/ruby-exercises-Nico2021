@@ -4,6 +4,19 @@ A collection of exercises to practice Ruby, and test-driven design (TDD).
 
 Here's a guide that might be helpful in understanding the principles covered in these tests: [josh.works/turing-backend-prep-mythical-creatures](https://josh.works/turing-backend-prep-mythical-creatures).
 
+### Mythical Creatures List In Order
+
+  1. Unicorn - []
+  2. Vampire - []
+  3. Dragon - []
+  4. Hobbit - []
+  5. Pirate - []
+  6. Wizard - []
+  7. Medusa - []
+  8. Werewolf - []
+  9. Centaur - []
+  10. Ogre - []
+
 ## How to Run
 
 In order to complete these exercises create a class for each of the mythical creatures in the `test` directory.
