@@ -6,16 +6,17 @@ Here's a guide that might be helpful in understanding the principles covered in 
 
 ### Mythical Creatures List In Order
 
-  1. Unicorn - []
-  2. Vampire - []
-  3. Dragon - []
-  4. Hobbit - []
-  5. Pirate - []
-  6. Wizard - []
-  7. Medusa - []
+  1. Unicorn - [x]
+  2. Vampire - [x]
+  3. Dragon - [x]
+  4. Hobbit - [x]
+  5. Pirate - [x]
+  6. Wizard - [x]
+  7. Medusa - [x]
   8. Werewolf - []
   9. Centaur - []
   10. Ogre - []
+  11. Direwolf - []
 
 ## How to Run
 
