@@ -8,7 +8,7 @@ class Pirate
   end
   
   def cursed?
-   @heinous_act >= 3; 
+    @heinous_act >= 3; 
   end
 
   def commit_heinous_act
