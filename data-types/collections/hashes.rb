@@ -160,7 +160,7 @@ class HashesTest < Minitest::Test
   end
 
   def test_12
-  skip
+  #skip
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -168,7 +168,8 @@ class HashesTest < Minitest::Test
     # Using the books hash defined above,
     # change the value associated with
     # :John_Steinbeck to "Of Mice and Men"
-    ______
+    books[:John_Steinbeck] =  "Of Mice and Men"
+
     expected =  {
       John_Steinbeck: "Of Mice and Men",
       Harper_Lee: "To Kill a Mockingbird"
@@ -177,14 +178,15 @@ class HashesTest < Minitest::Test
   end
 
   def test_13
-  skip
+  #skip
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
     }
     # Using the books hash defined above,
     # delete the key :Harper_Lee
-    ______
+    books.delete(:Harper_Lee)
+
     expected = {
       John_Steinbeck: "Grapes of Wrath"
     }
@@ -192,7 +194,7 @@ class HashesTest < Minitest::Test
   end
 
   def test_14
-  skip
+  #skip
     ages = {
       "Jimmy" => 4,
       "Julio" => 8,
@@ -200,12 +202,12 @@ class HashesTest < Minitest::Test
     }
     # Using the ages hash defined above
     # increment Julio's age by one
-    ______
+    ages["Julio"] = ages["Julio"] + 1
     assert_equal 9, ages["Julio"]
   end
 
   def test_15
-  skip
+  #skip
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -213,12 +215,12 @@ class HashesTest < Minitest::Test
     }
     # Using the ages hash defined above
     # increment Julio's age by one
-    ______
+    ages[:Julio] = ages[:Julio] + 1
     assert_equal 9, ages[:Julio]
   end
 
   def test_16
-  skip
+  #skip
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -226,12 +228,13 @@ class HashesTest < Minitest::Test
     }
     # Using the ages hash defined above
     # get an array of all the names
-    names = ______
+    #names = ages.map {|k, v| k} 
+    names  = ages.keys
     assert_equal [:Jimmy, :Julio, :Juliet], names
   end
 
   def test_17
-  skip
+  #skip
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -239,12 +242,13 @@ class HashesTest < Minitest::Test
     }
     # Using the ages hash defined above
     # get an array of all the ages
-    age_list = ______
+    #age_list = ages.map {|k, v| v}
+    age_list = ages.values
     assert_equal [4, 8, 9], age_list
   end
 
   def test_18
-  skip
+  #skip
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -252,12 +256,12 @@ class HashesTest < Minitest::Test
     }
     # Using the ages hash defined above
     # find the number of key/value pairs
-    num_pairs = ______
+    num_pairs = ages.keys.count
     assert_equal 3, num_pairs
   end
 
   def test_19
-  skip
+  #skip
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -265,17 +269,17 @@ class HashesTest < Minitest::Test
     }
     # Call a method on the ages hash defined above
     # to figure out if :Jimmy is a key
-    jimmy_in_hash = ______
+    jimmy_in_hash = ages.has_key?(:Jimmy)
     assert_equal true, jimmy_in_hash
 
     # Now figure out if :Jackie is in the hash
 
-    jackie_in_hash = ______
+    jackie_in_hash = ages.include?(:Jackie)
     assert_equal false, jackie_in_hash
   end
 
   def test_20
-  skip
+  #skip
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -283,7 +287,7 @@ class HashesTest < Minitest::Test
     }
     # Call a method on the ages hash defined above
     # to make the keys the values and vice versa
-    opposite = _____
+    opposite = ages.invert 
     expected = {
       4 => :Jimmy,
       8 => :Julio,
