@@ -81,9 +81,16 @@ class NestedTest < MiniTest::Test
   end
 
   def test_list_of_all_ingredients_across_all_restaurants
-    skip
+    #skip
     #=======================
     # ingredients = <your code here>
+    ingredients =
+      ingredients = []
+      stores.map do |store_name, store_data|
+        store_data[:dishes].each { |e| e[:ingredients].each {|ing| ingredients.push(ing) }}
+      end
+      ingredients
+
     #=======================
     assert_equal ["Rice",
                   "Cheese",
@@ -106,17 +113,26 @@ class NestedTest < MiniTest::Test
   end
 
   def test_full_menu_price_for_olive_garden
-    skip
+    #skip
     #=======================
     # full_menu_price = <your code here>
+    full_menu_price =
+    total = []
+    stores[:olive_garden][:dishes].each { |dish| total.push(dish[:price]) }
+    return total.sum
     #=======================
     assert_equal 27, full_menu_price
   end
 
   def test_full_menu_for_olive_garden
-    skip
+    #skip
     #=======================
     # olive_garden_menu = <your code here>
+    olive_garden_menu = Hash.new
+    stores[:olive_garden][:dishes].each do |dish|
+      olive_garden_menu[dish[:name]] = dish
+    end
+
     #=======================
     expected = ({"Risotto"=>{:name=>"Risotto", :ingredients=>["Rice", "Cheese", "Butter"], :price=>12},
                   "Steak"=>{:name=>"Steak", :ingredients=>["Beef", "Garlic"], :price=>15}})
@@ -124,9 +140,13 @@ class NestedTest < MiniTest::Test
   end
 
   def test_menu_accross_all_restaurants
-     skip
+     #skip
     #=======================
     #  full_menu = <your code here>
+    full_menu = Hash.new
+    stores.each do |store, store_data|
+      store_data[:dishes].each { |dish| full_menu[dish[:name]] = dish }
+    end
     #=======================
     expected = ({"Risotto"=>
                       {:name=>"Risotto", :ingredients=>["Rice", "Cheese", "Butter"], :price=>12},
