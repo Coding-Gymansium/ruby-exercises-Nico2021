@@ -129,30 +129,30 @@ class StringTest < Minitest::Test
   end
 
   def test_13
-    skip
+    #skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.length
     expected = 12
 
     assert_equal expected, actual
   end
 
   def test_14
-    skip
+    #skip
     greeting = "Hello World!\n"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.length
     expected = 13
 
     assert_equal expected, actual
   end
 
   def test_15
-    skip
+    #skip
     greeting = "Hello       World!"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.length
     expected = 18
 
     assert_equal expected, actual
@@ -162,49 +162,49 @@ class StringTest < Minitest::Test
     skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of 'o' in the string
-    actual = greeting._____
+    actual = greeting.count "o"
     expected = 2
 
     assert_equal expected, actual
   end
 
   def test_17
-    skip
+    #skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of vowels in the string
-    actual = greeting._____
+    actual = greeting.count "aeiou"
     expected = 3
 
     assert_equal expected, actual
   end
 
   def test_18
-    skip
+    #skip
     greeting = "Hello World!"
     # In place of the line below, call a method to check if the string includes 'llo'
-    actual = greeting._____
+    actual = greeting.include?('llo')
     expected = true
 
     assert_equal expected, actual
   end
 
   def test_19
-    skip
+    #skip
     greeting = "Hello World!"
     # In place of the line below, call a method to check if the string includes 'lol'
-    actual = greeting._____
+    actual = greeting.include?('lol')
     expected = false
 
     assert_equal expected, actual
   end
 
   def test_20
-    skip
+    #skip
     greeting = "Hello World, my name is"
     name = "Harry Potter"
     # In place of the line below, use string manipulation to combine the
     #greeting and name variables to acheive the expected outcome
-    actual = _________
+    actual = greeting + " " + name
     expected = "Hello World, my name is Harry Potter"
   end
   
